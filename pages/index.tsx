@@ -1,13 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Categories from "@/components/Categories";
 
 export default function Home() {
   return (
     <>
     <Header />
-    <h1 className="text-3xl font-bold bg-red-500">
-      Hello world!
-    </h1>
+    <img src="/banner.jpg" alt="Banner Image" className="mx-auto w-full" />
+    <Categories />
     <Footer />
     </>
   )
