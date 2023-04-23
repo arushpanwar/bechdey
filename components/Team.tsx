@@ -5,20 +5,20 @@ const Team = ()=>{
         <section className="bg-white dark:bg-gray-900">
   <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
       <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Team</h2>
-          <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
+          <h2 className="mb-4 text-5xl tracking-tight font-medium text-gray-900 dark:text-white">Our Team</h2>
+          <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">A Team of Four with bespoke expertise in their following fields. <br /> We focus on adding new functionalities along with maintaining the beauty of the product.</p>
       </div> 
       <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-          <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <div className=" max-h-40 items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                  <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Avatar" />
+                  <img className="max-h-40 rounded-lg sm:rounded-none sm:rounded-l-lg " src="/Images/Team/Dhruv.jpg" alt="Bonnie Avatar" />
               </a>
               <div className="p-5">
                   <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      <a href="#">Bonnie Green</a>
+                      <a href="#">Arush Panwar</a>
                   </h3>
-                  <span className="text-gray-500 dark:text-gray-400">CEO & Web Developer</span>
-                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Bonnie drives the technical strategy of the flowbite platform and brand.</p>
+                  <span className="text-gray-500 dark:text-gray-400">MERN Full-Stack Developer</span>
+                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Arush successfully beats every challenge posed to him.</p>
                   <ul className="flex space-x-4 sm:mt-0">
                       <li>
                           <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -43,16 +43,16 @@ const Team = ()=>{
                   </ul>
               </div>
           </div> 
-          <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <div className=" max-h-40 items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                  <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Avatar" />
+                  <img className="max-h-40 rounded-lg sm:rounded-none sm:rounded-l-lg" src="/Images/Team/Dhruv.jpg" alt="Jese Avatar" />
               </a>
               <div className="p-5">
                   <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      <a href="#">Jese Leos</a>
+                      <a href="#">Dhruv Rajak</a>
                   </h3>
-                  <span className="text-gray-500 dark:text-gray-400">CTO</span>
-                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Jese drives the technical strategy of the flowbite platform and brand.</p>
+                  <span className="text-gray-500 dark:text-gray-400">Front-End Developer & Designer</span>
+                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Dhruv is very particular about his choices and ways.</p>
                   <ul className="flex space-x-4 sm:mt-0">
                       <li>
                           <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -77,16 +77,16 @@ const Team = ()=>{
                   </ul>
               </div>
           </div> 
-          <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <div className=" max-h-40 items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                  <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="Michael Avatar" />
+                  <img className="max-h-40 rounded-lg sm:rounded-none sm:rounded-l-lg" src="/Images/Team/Dhruv.jpg" alt="Michael Avatar" />
               </a>
               <div className="p-5">
                   <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      <a href="#">Michael Gough</a>
+                      <a href="#">Chinmay Dorge</a>
                   </h3>
-                  <span className="text-gray-500 dark:text-gray-400">Senior Front-end Developer</span>
-                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Michael drives the technical strategy of the flowbite platform and brand.</p>
+                  <span className="text-gray-500 dark:text-gray-400">Backend-Developer</span>
+                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Chinmay is the backbone of the team and brings everyone together.</p>
                   <ul className="flex space-x-4 sm:mt-0">
                       <li>
                           <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -111,16 +111,16 @@ const Team = ()=>{
                   </ul>
               </div>
           </div> 
-          <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+          <div className=" max-h-40 items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
               <a href="#">
-                  <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png" alt="Sofia Avatar" />
+                  <img className="max-h-40 rounded-lg sm:rounded-none sm:rounded-l-lg" src="/Images/Team/Dhruv.jpg" alt="Sofia Avatar" />
               </a>
               <div className="p-5">
                   <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      <a href="#">Lana Byrd</a>
+                      <a href="#">Sahil Rathi</a>
                   </h3>
-                  <span className="text-gray-500 dark:text-gray-400">Marketing & Sale</span>
-                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Lana drives the technical strategy of the flowbite platform and brand.</p>
+                  <span className="text-gray-500 dark:text-gray-400">Backend and Prompt-Engineer</span>
+                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Sahil takes time to get motivated but becomes a rocket when he is.</p>
                   <ul className="flex space-x-4 sm:mt-0">
                       <li>
                           <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
