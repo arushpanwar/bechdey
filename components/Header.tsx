@@ -12,11 +12,12 @@ const Header = () => {
           </a>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900">Top Products</a>
-          <a className="mr-5 hover:text-gray-900">Product List</a>
-          <a className="mr-5 hover:text-gray-900">About us</a>
+         <Link rel="stylesheet" href={"/"}> <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">Top Products</a></Link>
+         <Link rel="stylesheet" href={"/"}> <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">All Products</a> </Link>
+         <Link rel="stylesheet" href={"/"}> <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">Sell</a></Link>
+         <Link rel="stylesheet" href={"/"}> <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">About us</a></Link>
         </nav>
-        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0">
           Logout
           <svg
             fill="none"
