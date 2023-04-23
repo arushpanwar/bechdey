@@ -9,7 +9,7 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 interface Product {
-  id: string;
+  id: number;
   name: string;
   price: number;
   image: string;
@@ -17,13 +17,14 @@ interface Product {
   color: string;
 }
 
-
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     async function fetchProducts() {
-      const { data, error } = await supabase.from<Product>("products").select("*");
+      const { data, error } = await supabase
+        .from<Product>("products")
+        .select("*");
 
       if (error) {
         console.error(error);
@@ -36,17 +37,10 @@ const Products = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex justify-center">
       {products.map((product) => (
         <>
-        <Product product={product} />
-        <div key={product.id}>
-          <h2>{product.name}</h2>
-          <p>{product.price}</p>
-          <img src={product.image} alt={product.name} />
-          <p>{product.description}</p>
-          <p>{product.color}</p>
-        </div>
+          <Product key={product.id} product={product} />
         </>
       ))}
     </div>
