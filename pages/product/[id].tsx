@@ -1,9 +1,40 @@
+import React, { useState, useEffect } from "react";
+import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { log } from "console";
+
+const supabaseUrl = "https://zigydihmnwehecgeokqz.supabase.co";
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InppZ3lkaWhtbndlaGVjZ2Vva3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNTU5MzcsImV4cCI6MTk5NzgzMTkzN30.X5tDt3Pk0dk_TPHzr3us_lqHDJuRZ6YpT0zMAeIIfTE";
+
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 const Post = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      const { data, error } = await supabase
+        .from<Product>("products")
+        .select("*");
+
+      if (error) {
+        console.error(error);
+      } else {
+        setProducts(data);
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
   const router = useRouter();
   const { id } = router.query;
+  const selectedProduct = products.find((product) => product.id == id);
+
+  console.log(products);
+  console.log(selectedProduct);
 
   return (
     <>
@@ -13,26 +44,19 @@ const Post = () => {
             <img
               alt="ecommerce"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+              src={selectedProduct?.image}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                BRAND NAME
+                {selectedProduct?.color}
               </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                The Catcher in the Rye
+                {selectedProduct?.name}
               </h1>
-              <p className="leading-relaxed">
-                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-                sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-                seitan poutine tumeric. Gastropub blue bottle austin listicle
-                pour-over, neutra jean shorts keytar banjo tattooed umami
-                cardigan.
-              </p>
+              <p className="leading-relaxed">{selectedProduct?.description}</p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
-                  <span className="mr-3">Color</span>
+                  <span className="mr-3"></span>
                   <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
                 </div>
                 <div className="flex ml-6 items-center">
@@ -48,9 +72,9 @@ const Post = () => {
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         className="w-4 h-4"
                         viewBox="0 0 24 24"
                       >
@@ -62,7 +86,7 @@ const Post = () => {
               </div>
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">
-                  $58.00
+                  ${selectedProduct?.price}
                 </span>
                 <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                   Add to Cart
