@@ -8,7 +8,7 @@ const Header = () => {
           <img src="/logo.png" className="w-10 h-10 -rotate-45" alt="logo" />
           <span className="ml-3 font-bold text-2xl">Rentway</span>
         </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">++
           <a className="mr-5 hover:text-gray-900">First Link</a>
           <a className="mr-5 hover:text-gray-900">Second Link</a>
           <a className="mr-5 hover:text-gray-900">Third Link</a>
