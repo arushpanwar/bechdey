@@ -39,8 +39,8 @@ const Header = () => {
 
   return (
     <header className="text-gray-600 body-font flex flex-col justify-center">
-      <div className="flex py-4 px-8 flex-col items-center ">
-        <div className="w-full flex justify-between items-center px-[26rem]">
+      <div className="bg-white flex py-4 px-8 flex-col items-center ">
+        <div className=" w-full flex justify-between items-center px-[26rem]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -130,7 +130,7 @@ const Header = () => {
               >
                 Logout
               </button>
-              <span>Hello, {user?.identities[0].identity_data.full_name}</span>
+              <span className="px-6">Hello, {user?.identities[0].identity_data.full_name}</span>
             </>
           ) : (
             // <GoogleButton onClick={signInWithGoogle} />

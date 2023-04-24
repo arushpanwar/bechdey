@@ -35,7 +35,7 @@ export default function Submit() {
 
   return (
     <>
-      <section className="bg-white">
+      <section className="">
         <div className="py-6 px-10 mx-auto my-6 max-w-2xl lg:py-16 bg-neutral-200 rounded-lg">
           <h2 className="mb-4 text-2xl font-bold text-gray-900 ">
             Add a new product
