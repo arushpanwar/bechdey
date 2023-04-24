@@ -35,9 +35,9 @@ export default function Submit() {
 
   return (
     <>
-      <section className="bg-white dark:bg-gray-900">
+      <section className="bg-white">
         <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-          <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+          <h2 className="mb-4 text-xl font-bold text-gray-900 ">
             Add a new product
           </h2>
           <form onSubmit={handleSubmit}>
@@ -45,7 +45,7 @@ export default function Submit() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="name"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Product Name
                   <input
@@ -54,14 +54,14 @@ export default function Submit() {
                     onChange={(e) => setName(e.target.value)}
                     name="name"
                     id="name"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                     placeholder="Type product name"
                     required
                   />
                 </label>
                 <label
                   htmlFor="image"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Image
                   <input
@@ -70,7 +70,7 @@ export default function Submit() {
                     onChange={(e) => setImage(e.target.value)}
                     name="name"
                     id="image"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                     placeholder="Enter Image URL"
                     required
                   />
@@ -79,7 +79,7 @@ export default function Submit() {
               <div className="w-full">
                 <label
                   htmlFor="price"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Price
                   <input
@@ -88,7 +88,7 @@ export default function Submit() {
                     onChange={(e) => setPrice(e.target.value)}
                     name="price"
                     id="price"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                     placeholder="Product Price"
                     required
                   />
@@ -97,7 +97,7 @@ export default function Submit() {
               <div className="w-full">
                 <label
                   htmlFor="color"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Color
                   <input
@@ -106,7 +106,7 @@ export default function Submit() {
                     onChange={(e) => setColor(e.target.value)}
                     name="color"
                     id="color"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                     placeholder="Product Color"
                     required
                   />
@@ -115,14 +115,14 @@ export default function Submit() {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="description"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Description
                   <textarea
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     id="description"
-                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 "
                     placeholder="Your description here"
                   ></textarea>
                 </label>
@@ -130,7 +130,7 @@ export default function Submit() {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-black bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+              className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-black bg-neutral-100 rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-neutral-300"
             >
               Add product
             </button>

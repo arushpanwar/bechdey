@@ -8,8 +8,8 @@ const Hero = () => {
         alt="banner1"
         className="banner px-20  h-[500px] mb-10 "
       />
-      <div className="absolute inset-0 flex items-center justify-center text-center ">
-        <div className="flex flex-col">
+      <div className="  flex items-center justify-center text-center ">
+        <div className="absolute inset-0 top-52 flex flex-col">
           <span className="text-4xl font-semibold mb-1  text-white">
             Traditions Preserved
           </span>
