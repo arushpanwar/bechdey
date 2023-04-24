@@ -17,7 +17,7 @@ const Categories = () => {
               width={32}
               height={32}
             />
-            <li>Category 1</li>
+            <li className="text-xl font-light text-gray-550 mb-5">Jeans</li>
           </div>
           <div className="flex flex-col items-center">
             <Image
@@ -26,7 +26,7 @@ const Categories = () => {
               width={32}
               height={32}
             />
-            <li>Category 2</li>
+            <li className="text-xl font-light text-gray-550 mb-5">Saree</li>
           </div>
           <div className="flex flex-col items-center">
             <Image
@@ -35,7 +35,7 @@ const Categories = () => {
               width={32}
               height={32}
             />
-            <li>Category 3</li>
+            <li className="text-xl font-light text-gray-550 mb-5">Shirts</li>
           </div>
           <div className="flex flex-col items-center">
             <Image
@@ -45,7 +45,7 @@ const Categories = () => {
               height={32}
               className=""
             />
-            <li>Category 4</li>
+            <li className="text-xl font-light text-gray-550 mb-5">Tops</li>
           </div>
         </ul>
       </div>
