@@ -5,8 +5,8 @@ import Image from "next/image";
 const Categories = () => {
   return (
     <div className="flex justify-center items-center mt-10">
-      <div className="flex flex-col items-center bg-yellow-100 w-[1200px] pb-16">
-        <h2 className="category-heading text-center text-[50px] mt-4 pb-12">
+      <div className="flex flex-col items-center bg-yellow-100 w-[1200px] pt-6 pb-16">
+        <h2 className="category-heading text-center text-5xl font-semibold text-neutral-800 mt-4 pb-12">
           Categories
         </h2>
         <ul className="category-list flex justify-around w-full">

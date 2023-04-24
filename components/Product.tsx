@@ -27,7 +27,7 @@ const dummyproduct = {
 const Product = ({ product }:ProductProps) => {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 py-10 sm:py-10 sm:px-6  lg:max-w-7xl lg:px-8">
         <div key={product?.id} className="group relative">
           <div className="min-h-[250px] w-[250px] aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
             <img

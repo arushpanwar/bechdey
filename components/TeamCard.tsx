@@ -15,25 +15,25 @@ interface TeamCardProps {
 const TeamCard = ({ name, role, bio, avatarSrc }: TeamCardProps) => {
   return (
     <>
-      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex ">
         <img
           className="rounded-lg sm:rounded-none sm:rounded-l-lg w-52 h-52 object-cover"
           src={avatarSrc}
           alt={name}
         />
         <div className="p-5">
-          <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h3 className="text-xl font-bold tracking-tight text-gray-900">
             <a href="#">{name}</a>
           </h3>
-          <span className="text-gray-500 dark:text-gray-400">{role}</span>
-          <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+          <span className="text-gray-500 ">{role}</span>
+          <p className="mt-3 mb-4 font-light text-gray-500 ">
             {bio}
           </p>
           <ul className="flex space-x-4 sm:mt-0">
             <li>
               <a
                 href="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-500 hover:text-gray-900 "
               >
                 <svg
                   className="w-5 h-5"
@@ -48,7 +48,7 @@ const TeamCard = ({ name, role, bio, avatarSrc }: TeamCardProps) => {
             <li>
               <a
                 href="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-500 hover:text-gray-900 "
               >
                 <svg
                   className="w-5 h-5"
