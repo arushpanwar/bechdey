@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const banners = ["/banner1.png", "/banner.jpg", "/banner1.png"];
+const banners = ["/banner1.png", "/banner2.png", "/banner3.png"];
 
 const Hero = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
@@ -8,7 +8,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setBannerIndex((bannerIndex + 1) % banners.length);
-    }, 1000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [bannerIndex]);
 
