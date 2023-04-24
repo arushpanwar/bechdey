@@ -19,7 +19,6 @@ const Categories = () => {
               width={40}
               height={40}
             />
-            <li>Category 1</li>
             </div>
             <li>Jeans</li>
           </div>
@@ -33,7 +32,6 @@ const Categories = () => {
               width={40}
               height={40}
             />
-            <li>Category 2</li>
             </div>
             <li>Saree</li>
           </div>
@@ -47,7 +45,6 @@ const Categories = () => {
               width={40}
               height={40}
             />
-            <li>Category 3</li>
             </div>
             <li>Shirts</li>
           </div>
@@ -62,7 +59,6 @@ const Categories = () => {
               width={40}
               height={40}
             />
-            <li>Category 4</li>
             </div>
             <li>Tops</li>
           </div>
