@@ -1,24 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+const banners = ["/banner1.png", "/banner.jpg", "/banner1.png"];
 
 const Hero = () => {
+  const [bannerIndex, setBannerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBannerIndex((bannerIndex + 1) % banners.length);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [bannerIndex]);
+
   return (
-    <div className=" relative flex justify-center">
-      <img
-        src="/banner1.png"
-        alt="banner1"
-        className="banner px-20  h-[500px] mb-10 "
-      />
-      <div className="  flex items-center justify-center text-center ">
-        <div className="absolute inset-0 top-52 flex flex-col">
-          <span className="text-4xl font-semibold mb-1  text-white">
+    <div className="relative flex justify-center">
+      {banners.map((banner, index) => (
+        <img
+          key={index}
+          src={banner}
+          alt={`banner${index}`}
+          className={`banner px-20 h-[500px] mb-10 ${
+            index === bannerIndex ? "" : "hidden"
+          }`}
+        />
+      ))}
+      <div className="absolute inset-0 flex items-center justify-center text-center">
+        <div className="flex flex-col">
+          <span className="text-4xl font-semibold mb-1 text-white">
             Traditions Preserved
           </span>
-          <span className="text-xl text-white">
-            Prices Reasonable
-          </span>
+          <span className="text-xl text-white">Prices Reasonable</span>
         </div>
       </div>
     </div>
+    // <div className=" relative flex justify-center">
+    //   <img
+    //     src="/banner1.png"
+    //     alt="banner1"
+    //     className="banner px-20  h-[500px] mb-10 "
+    //   />
+    //   <div className="absolute inset-0 flex items-center justify-center text-center ">
+    //     <div className="flex flex-col">
+    //       <span className="text-4xl font-semibold mb-1  text-white">
+    //         Traditions Preserved
+    //       </span>
+    //       <span className="text-xl text-white">
+    //         Prices Reasonable
+    //       </span>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 
