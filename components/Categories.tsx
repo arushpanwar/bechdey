@@ -11,39 +11,42 @@ const Categories = () => {
         </h2>
         <ul className="category-list flex justify-around w-full">
           <div className="flex flex-col items-center">
+            <div className="bg-yellow-300 h-16 w-16 flex justify-center items-center rounded-md">
             <Image
               src="/Images/jeans_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
+              width={40}
+              height={40}
             />
             <li className="text-xl font-light text-gray-550 mb-5">Jeans</li>
           </div>
           <div className="flex flex-col items-center">
+            <div className="bg-yellow-300 h-16 w-16 flex justify-center items-center rounded-md">
             <Image
               src="/Images/saree_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
+              width={40}
+              height={40}
             />
             <li className="text-xl font-light text-gray-550 mb-5">Saree</li>
           </div>
           <div className="flex flex-col items-center">
+            <div className="bg-yellow-300 h-16 w-16 flex justify-center items-center rounded-md">
             <Image
               src="/Images/kurta_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
+              width={40}
+              height={40}
             />
             <li className="text-xl font-light text-gray-550 mb-5">Shirts</li>
           </div>
           <div className="flex flex-col items-center">
+            <div className="bg-yellow-300 h-16 w-16 flex justify-center items-center rounded-md">
             <Image
               src="/Images/top_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
-              className=""
+              width={40}
+              height={40}
             />
             <li className="text-xl font-light text-gray-550 mb-5">Tops</li>
           </div>
