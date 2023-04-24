@@ -8,7 +8,7 @@ interface Props {
 
 const Layout = ({ children }:Props) => {
   return (
-    <div>
+    <div className='bg-blue-950'>
       <Header />
       {children}
       <FooterMain />
