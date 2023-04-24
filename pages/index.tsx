@@ -3,7 +3,8 @@ import Footer from "@/components/Footer";
 import Categories from "@/components/Categories";
 import ProductsList from "@/components/ProductsList";
 import Hero from "@/components/Hero";
-import Team from "@/components/Team"
+import Team from "@/components/Team";
+import FooterMain from "@/components/footerMain";
 export default function Home() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function Home() {
     <Categories />
     <ProductsList />
     {/* <Team/> */}
+    <FooterMain/>
     </>
   )
 }
