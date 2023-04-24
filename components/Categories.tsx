@@ -14,8 +14,6 @@ const Categories = () => {
             <Image
               src="/Images/jeans_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
               width={40}
               height={40}
             />
@@ -27,8 +25,6 @@ const Categories = () => {
             <Image
               src="/Images/saree_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
               width={40}
               height={40}
             />
@@ -40,8 +36,6 @@ const Categories = () => {
             <Image
               src="/Images/kurta_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
               width={40}
               height={40}
             />
@@ -53,8 +47,6 @@ const Categories = () => {
             <Image
               src="/Images/top_icon.png"
               alt="My Icon"
-              width={32}
-              height={32}
               className=""
               width={40}
               height={40}
