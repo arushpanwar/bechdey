@@ -1,38 +1,41 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { createClient } from "@supabase/supabase-js";
 import { supabase } from "../lib/supabase";
-import { Session } from "inspector";
+import Router from "next/router";
+import GoogleButton from "react-google-button";
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const router = useRouter();
-
-  console.log(isLoggedIn);
+  const [user, setUser] = useState(null);
+  const [currentSession, setCurrentSession] = useState(null);
 
   useEffect(() => {
     const checkUser = async () => {
       const { data: session } = await supabase.auth.getSession();
-      setIsLoggedIn(session !== null);
-      console.log(session);
-      console.log(isLoggedIn);
+      // console.log(session);
+      setUser(session?.user ?? null);
     };
+
+    const { data: authListener } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        setUser(session?.user ?? null);
+      }
+    );
 
     checkUser();
   }, []);
 
-  async function handleLogout() {
-    const { error } = await supabase.auth.signOut();
-
-    if (error) {
-      console.error(error);
-    } else {
-      router.push("/");
-    }
+  async function signInWithGoogle() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
   }
 
-  console.log(isLoggedIn);
+  async function signOut() {
+    const { error } = await supabase.auth.signOut();
+    Router.reload();
+  }
+
+  console.log(user?.identities[0].identity_data.full_name);
 
   return (
     <header className="text-gray-600 body-font flex justify-around">
@@ -59,31 +62,31 @@ const Header = () => {
               About us
             </a>
           </Link>
-          {isLoggedIn ? (
-            <button
-              onClick={handleLogout}
-              className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0"
-            >
-              Logout
-            </button>
-          ) : (
+          <Link legacyBehavior href={"/predict"}>
+            <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">
+              Predict
+            </a>
+          </Link>
+          {user ? (
             <>
-              <Link legacyBehavior href="/login">
-                <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">
-                  Login
-                </a>
-              </Link>
-              <Link legacyBehavior href="/signup">
-                <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">
-                  Sign Up 
-                </a>
-              </Link>
+              <button
+                className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0"
+                onClick={signOut}
+              >
+                Logout
+              </button>
+              <span>Hello, {user?.identities[0].identity_data.full_name}</span>
             </>
+          ) : (
+            // <GoogleButton onClick={signInWithGoogle} />
+            <button
+              className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0"
+              onClick={signInWithGoogle}
+            >
+              SignIn
+            </button>
           )}
         </nav>
-        {/* <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0">
-          Logout
-        </button> */}
       </div>
     </header>
   );

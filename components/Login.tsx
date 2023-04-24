@@ -1,42 +1,18 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "../lib/supabase";
+import GoogleButton from 'react-google-button'
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const router = useRouter();
-
-  async function handleLogin() {
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    if (error) {
-      setError(error.message);
-    } else {
-      router.push("/");
-    }
-  }
+    async function signInWithGoogle() {
+        const { data, error } = await supabase.auth.signInWithOAuth({
+          provider: 'google',
+        })
+      }
 
   return (
     <div>
-      <h1>Login</h1>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      {error && <p>{error}</p>}
-      <button onClick={handleLogin}>Login</button>
+      <GoogleButton onClick={signInWithGoogle} />
     </div>
   );
 }
