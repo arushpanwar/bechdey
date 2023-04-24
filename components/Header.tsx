@@ -109,7 +109,7 @@ const Header = () => {
           </Link>
           <Link legacyBehavior href={"/submit"}>
             <a className="mx-5 hover:text-neutral-600 text-neutral-950 delay-75">
-              Sell
+              Upload
             </a>
           </Link>
           <Link legacyBehavior href={"/about"}>
@@ -130,7 +130,7 @@ const Header = () => {
               >
                 Logout
               </button>
-              <span>Hello, {user?.identities[0].identity_data.full_name}</span>
+              <span className="px-6">Hello, {user?.identities[0].identity_data.full_name}</span>
             </>
           ) : (
             // <GoogleButton onClick={signInWithGoogle} />
