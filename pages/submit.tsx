@@ -47,7 +47,7 @@ export default function Submit() {
                   htmlFor="name"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Product Name
+                  <div className="mb-1 ml-1">Product Name</div>
                   <input
                     type="text"
                     value={name}
@@ -63,7 +63,7 @@ export default function Submit() {
                   htmlFor="image"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Image
+                  <div className="mb-1 ml-1">Image Link</div>
                   <input
                     type="text"
                     value={image}
@@ -81,7 +81,7 @@ export default function Submit() {
                   htmlFor="price"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Price
+                  <div className="mb-1 ml-1">Price</div>
                   <input
                     type="number"
                     value={price}
@@ -99,7 +99,7 @@ export default function Submit() {
                   htmlFor="color"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Color
+                  <div className="mb-1 ml-1">Color</div>
                   <input
                     type="text"
                     value={color}
@@ -117,7 +117,7 @@ export default function Submit() {
                   htmlFor="description"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  Description
+                  <div className="mb-1 ml-1">Description</div>
                   <textarea
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
