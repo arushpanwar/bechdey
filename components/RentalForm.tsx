@@ -113,7 +113,7 @@ function RentalForm() {
     </div>
 
     <div className="flex flex-col mb-3">
-      <label htmlFor="rental_duration" className="block text-gray-700 font-bold mb-2">Rental Duration :</label>
+      <label htmlFor="rental_duration" className="block text-gray-700 font-bold mb-2">Rental Duration (Days) :</label>
       <input type="number" id="rental_duration" name="rental_duration" value={formData.rental_duration} onChange={handleChange} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
     </div>
 
@@ -144,11 +144,13 @@ function RentalForm() {
     </div>
 
     <button type="submit" className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded shadow-md">Submit</button>
+    <p className="mt-4 bg-gray-400 text-white font-bold py-2 px-4 rounded shadow-md">Prediction Result :{predictionResult} </p>
 </form> 
+
+  {/* {predictionResult && <p className="mt-4 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded shadow-md">Prediction Result: {predictionResult}</p>} */}
 </div> 
 
 
-  {predictionResult && <p className="mt-4">Prediction Result: {predictionResult}</p>}
   <form onSubmit={handleSubmit} className="flex flex-col"></form>
     </>
   );
