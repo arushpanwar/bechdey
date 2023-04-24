@@ -65,7 +65,7 @@ function RentalForm() {
     <>
 
 <div className="flex justify-center items-center h-screen">
-  <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+  <form onSubmit={handleSubmit} className="flex flex-col bg-white rounded-lg shadow-lg p-8">
 
   <div className="grid grid-cols-2 gap-4 mb-3">
 
