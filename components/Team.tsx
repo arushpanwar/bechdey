@@ -5,26 +5,26 @@ const team = [
   {
     name: "Arush Panwar",
     role: "Full Stack Developer",
-    bio: "Random XYZ who codes sometimes",
+    bio: "Allrounder",
     avatarSrc: "/Images/Team/Arush.jpg",
   },
   {
     name: "Dhruv Rajak",
-    role: "Full Stack Developer ",
-    bio: "Random XYZ",
+    role: "Front End Developer and UI/UX Designer ",
+    bio: "I like to design and code",
     avatarSrc: "/Images/Team/Dhruv.jpg",
   },
   {
-    name: "Arush Panwar",
-    role: "Full Stack Developer",
-    bio: "Random XYZ",
-    avatarSrc: "/Images/Team/Arush.jpg",
+    name: "Sahil Rathi",
+    role: "Back End & ML Developer",
+    bio: "I fill in wherever required",
+    avatarSrc: "/Images/Team/Sahil.jpeg",
   },
   {
-    name: "Arush Panwar",
-    role: "Full Stack Developer",
-    bio: "Random XYZ",
-    avatarSrc: "/Images/Team/Arush.jpg",
+    name: "Chinmay Dorge",
+    role: "Back End & ML Developer",
+    bio: "Backbone",
+    avatarSrc: "/Images/Team/Sahil.jpeg",
   },
 ];
 
