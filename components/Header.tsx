@@ -57,7 +57,7 @@ const Header = () => {
               Sell
             </a>
           </Link>
-          <Link legacyBehavior href={"/aboutus"}>
+          <Link legacyBehavior href={"/about"}>
             <a className="mr-5 hover:text-neutral-600 text-neutral-950 delay-75">
               About us
             </a>

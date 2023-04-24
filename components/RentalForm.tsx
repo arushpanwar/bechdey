@@ -63,48 +63,93 @@ function RentalForm() {
 
   return (
     <>
-    <form onSubmit={handleSubmit} className="flex flex-col">
-      <label htmlFor="cloth_type" >Cloth Type:</label>
-      <input type="text" id="cloth_type" name="cloth_type" onBlur={handleBlur} />
 
-      <label htmlFor="size">Size:</label>
-      <input type="text" id="size" name="size"  onBlur={handleBlur} />
+<div className="flex justify-center items-center h-screen">
+  <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
 
-      <label htmlFor="color">Color:</label>
-      <input type="text" id="color" name="color"  onBlur={handleBlur} />
+  <div className="grid grid-cols-2 gap-4 mb-3">
 
-      <label htmlFor="fabric">Fabric:</label>
-      <input type="text" id="fabric" name="fabric"  onBlur={handleBlur} />
+    <div className="flex flex-col mb-3">
+      <label htmlFor="cloth_type" className="block text-gray-700 font-bold mb-2">Cloth Type :</label>
+      <input type="text" id="cloth_type" name="cloth_type" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
 
-      <label htmlFor="brand">Brand:</label>
-      <input type="text" id="brand" name="brand"  onBlur={handleBlur} />
+    <div className="flex flex-col mb-3">
+      <label htmlFor="size" className="block text-gray-700 font-bold mb-2">Size :</label>
+      <input type="text" id="size" name="size" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
+    
+    </div>
 
-      <label htmlFor="mrp">MRP:</label>
-      <input type="number" id="mrp" name="mrp" value={formData.mrp} onChange={handleChange} />
+    <div className="grid grid-cols-2 gap-4 mb-3">
 
-      <label htmlFor="age_months">Age (months):</label>
-      <input type="number" id="age_months" name="age_months" value={formData.age_months} onChange={handleChange} />
+    <div className="flex flex-col mb-3">
+      <label htmlFor="color" className="block text-gray-700 font-bold mb-2">Color :</label>
+      <input type="text" id="color" name="color" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
 
-      <label htmlFor="rental_duration">Rental Duration:</label>
-      <input type="number" id="rental_duration" name="rental_duration" value={formData.rental_duration} onChange={handleChange} />
+    <div className="flex flex-col mb-3">
+      <label htmlFor="fabric" className="block text-gray-700 font-bold mb-2">Fabric :</label>
+      <input type="text" id="fabric" name="fabric" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
+    </div>
+    <div className="grid grid-cols-2 gap-4 mb-3">
+    <div className="flex flex-col mb-3">
+      <label htmlFor="brand" className="block text-gray-700 font-bold mb-2">Brand :</label>
+      <input type="text" id="brand" name="brand" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
 
-      <label htmlFor="availability">Availability:</label>
-      <input type="text" id="availability" name="availability" onBlur={handleBlur} />
+    <div className="flex flex-col mb-3">
+      <label htmlFor="mrp" className="block text-gray-700 font-bold mb-2">MRP :</label>
+      <input type="number" id="mrp" name="mrp" value={formData.mrp} onChange={handleChange} onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
+    </div>
 
-      <label htmlFor="condition">Condition:</label>
-      <input type="text" id="condition" name="condition"  onBlur={handleBlur}/>
+    <div className="grid grid-cols-2 gap-4 mb-3">
 
-      <label htmlFor="location">Location:</label>
-      <input type="text" id="location" name="location"  onBlur={handleBlur}/>
+    <div className="flex flex-col mb-3">
+      <label htmlFor="age_months" className="block text-gray-700 font-bold mb-2">Age in Months :</label>
+      <input type="number" id="age_months" name="age_months" value={formData.age_months} onChange={handleChange} onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
 
-      <label htmlFor="occasion">Occasion:</label>
-      <input type="text" id="occasion" name="occasion"  onBlur={handleBlur}/>
+    <div className="flex flex-col mb-3">
+      <label htmlFor="rental_duration" className="block text-gray-700 font-bold mb-2">Rental Duration :</label>
+      <input type="number" id="rental_duration" name="rental_duration" value={formData.rental_duration} onChange={handleChange} onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
 
-      <button type="submit">Submit</button>
-    </form>
+    </div>
 
-    {predictionResult && <p>Prediction Result: {predictionResult}</p>}
+    <div className="grid grid-cols-2 gap-4 mb-3">
+    
+    <div className="flex flex-col mb-3">
+      <label htmlFor="availability" className="block text-gray-700 font-bold mb-2">Availability :</label>
+      <input type="text" id="availability" name="availability" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
 
+    <div className="flex flex-col mb-3">
+      <label htmlFor="condition" className="block text-gray-700 font-bold mb-2">Condition :</label>
+      <input type="text" id="condition" name="condition" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
+    </div>
+    <div className="grid grid-cols-2 gap-4 mb-3">
+    <div className="flex flex-col mb-3">
+      <label htmlFor="location" className="block text-gray-700 font-bold mb-2">Location :</label>
+      <input type="text" id="location" name="location" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
+
+    <div className="flex flex-col mb-3">
+      <label htmlFor="occasion" className="block text-gray-700 font-bold mb-2">Occasion :</label>
+      <input type="text" id="occasion" name="occasion" onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+    </div>
+    </div>
+
+    <button type="submit" className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded shadow-md">Submit</button>
+</form> 
+</div> 
+
+
+  {predictionResult && <p className="mt-4">Prediction Result: {predictionResult}</p>}
+  <form onSubmit={handleSubmit} className="flex flex-col"></form>
     </>
   );
 }
