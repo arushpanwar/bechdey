@@ -19,7 +19,7 @@ const dummyproduct = {
   imageSrc:
     "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
   imageAlt: "Front of men's Basic Tee in black.",
-  price: "$35",
+  price: "3500",
   color: "Black",
 };
 
@@ -51,7 +51,7 @@ const Product = ({ product }:ProductProps) => {
               </p>
             </div>
             <p className="text-sm font-medium text-gray-900">
-              {product?.price || dummyproduct.price}
+            ₹{product?.price || dummyproduct.price}
             </p>
           </div>
         </div>
