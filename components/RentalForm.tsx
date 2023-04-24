@@ -101,7 +101,7 @@ function RentalForm() {
 
     <div className="flex flex-col mb-3">
       <label htmlFor="mrp" className="block text-gray-700 font-bold mb-2">MRP :</label>
-      <input type="number" id="mrp" name="mrp" value={formData.mrp} onChange={handleChange} onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+      <input type="number" id="mrp" name="mrp" value={formData.mrp} onChange={handleChange}  className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
     </div>
     </div>
 
@@ -109,12 +109,12 @@ function RentalForm() {
 
     <div className="flex flex-col mb-3">
       <label htmlFor="age_months" className="block text-gray-700 font-bold mb-2">Age in Months :</label>
-      <input type="number" id="age_months" name="age_months" value={formData.age_months} onChange={handleChange} onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+      <input type="number" id="age_months" name="age_months" value={formData.age_months} onChange={handleChange}  className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
     </div>
 
     <div className="flex flex-col mb-3">
       <label htmlFor="rental_duration" className="block text-gray-700 font-bold mb-2">Rental Duration :</label>
-      <input type="number" id="rental_duration" name="rental_duration" value={formData.rental_duration} onChange={handleChange} onBlur={handleBlur} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
+      <input type="number" id="rental_duration" name="rental_duration" value={formData.rental_duration} onChange={handleChange} className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"/>
     </div>
 
     </div>
