@@ -144,7 +144,7 @@ function RentalForm() {
     </div>
 
     <button type="submit" className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded shadow-md">Submit</button>
-    <p className="mt-4 bg-gray-400 text-white font-bold py-2 px-4 rounded shadow-md">Prediction Result :{predictionResult} </p>
+    <p className="mt-4 bg-gray-400 text-white font-bold py-2 px-4 rounded shadow-md">Prediction Result : {predictionResult} </p>
 </form> 
 
   {/* {predictionResult && <p className="mt-4 bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded shadow-md">Prediction Result: {predictionResult}</p>} */}
