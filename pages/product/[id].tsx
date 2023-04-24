@@ -33,8 +33,8 @@ const Post = () => {
   const { id } = router.query;
   const selectedProduct = products.find((product) => product.id == id);
 
-  console.log(products);
-  console.log(selectedProduct);
+  // console.log(products);
+  // console.log(selectedProduct);
 
   return (
     <>
