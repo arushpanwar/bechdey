@@ -23,7 +23,7 @@ const Features = () => {
         </div>
         <div className="bg-light-700 rounded-lg p-6 text-center">
           <h3 className="text-2xl font-mono text-gray-375 mb-5">Optimized Development Processes</h3>
-          <p className="text-gray-400">Rentway's use of TypeScript ensures optimized development processes for faster feature releases and updates.</p>
+          <p className="text-gray-400">Rentway&apos;s use of TypeScript ensures optimized development processes for faster feature releases and updates.</p>
         </div>
         <div className="bg-light-700 rounded-lg p-6 text-center">
           <h3 className="text-2xl font-mono text-gray-375 mb-5">Sustainable Rental System</h3>

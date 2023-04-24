@@ -130,7 +130,7 @@ const Header = () => {
               >
                 Logout
               </button>
-              <span>Hello, {user?.identities[0].identity_data.full_name}</span>
+              <span className="px-6">Hello, {user?.identities[0].identity_data.full_name}</span>
             </>
           ) : (
             // <GoogleButton onClick={signInWithGoogle} />
