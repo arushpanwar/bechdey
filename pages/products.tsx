@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import Product from "@/components/Product";
-
-const supabaseUrl = "https://zigydihmnwehecgeokqz.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InppZ3lkaWhtbndlaGVjZ2Vva3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNTU5MzcsImV4cCI6MTk5NzgzMTkzN30.X5tDt3Pk0dk_TPHzr3us_lqHDJuRZ6YpT0zMAeIIfTE";
-
-const supabase = createClient(supabaseUrl, supabaseKey);
+import { supabase } from "../lib/supabase";
 
 interface Product {
   id: number;
@@ -37,13 +32,31 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <>
+      <div className="flex flex-col justify-center">
+  {products.reduce((rows, product, index) => {
+    if (index % 4 === 0) rows.push([]);
+    rows[rows.length - 1].push(product);
+    return rows;
+  }, []).map((row, index) => (
+    <div key={index} className="flex justify-center">
+      {row.map((product) => (
+        <div key={product.id} className="px-4">
+          <Product product={product} />
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
+
+      {/* <div className="flex justify-center">
       {products.map((product) => (
         <>
           <Product key={product.id} product={product} />
         </>
       ))}
-    </div>
+    </div> */}
+    </>
   );
 };
 

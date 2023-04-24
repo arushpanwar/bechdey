@@ -28,50 +28,115 @@ export default function Submit() {
       console.log(data);
       // TODO: Handle successful submission
     }
+
+    //redirect to home page
+    window.location.href = "/";
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <label>
-        Price:
-        <input
-          type="number"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
-      </label>
-      <label>
-        Image:
-        <input
-          type="text"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
-      </label>
-      <label>
-        Description:
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-      </label>
-      <label>
-        Color:
-        <input
-          type="text"
-          value={color}
-          onChange={(e) => setColor(e.target.value)}
-        />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+    <>
+      <section className="bg-white dark:bg-gray-900">
+        <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+          <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+            Add a new product
+          </h2>
+          <form onSubmit={handleSubmit}>
+            <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Product Name
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    name="name"
+                    id="name"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Type product name"
+                    required
+                  />
+                </label>
+                <label
+                  htmlFor="image"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Image
+                  <input
+                    type="text"
+                    value={image}
+                    onChange={(e) => setImage(e.target.value)}
+                    name="name"
+                    id="image"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Enter Image URL"
+                    required
+                  />
+                </label>
+              </div>
+              <div className="w-full">
+                <label
+                  htmlFor="price"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Price
+                  <input
+                    type="number"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                    name="price"
+                    id="price"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Product Price"
+                    required
+                  />
+                </label>
+              </div>
+              <div className="w-full">
+                <label
+                  htmlFor="color"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Color
+                  <input
+                    type="text"
+                    value={color}
+                    onChange={(e) => setColor(e.target.value)}
+                    name="color"
+                    id="color"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Product Color"
+                    required
+                  />
+                </label>
+              </div>
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="description"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Description
+                  <textarea
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    id="description"
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    placeholder="Your description here"
+                  ></textarea>
+                </label>
+              </div>
+            </div>
+            <button
+              type="submit"
+              className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-black bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+            >
+              Add product
+            </button>
+          </form>
+        </div>
+      </section>
+    </>
   );
 }

@@ -24,7 +24,7 @@ const team = [
     name: "Chinmay Dorge",
     role: "Back End & ML Developer",
     bio: "Backbone",
-    avatarSrc: "/Images/Team/Sahil.jpeg",
+    avatarSrc: "/Images/Team/Chinmay.jpg",
   },
 ];
 
