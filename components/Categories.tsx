@@ -1,7 +1,6 @@
 import React from "react";
 import { CiCamera } from "react-icons/ci";
 import Image from "next/image";
-
 const Categories = () => {
   return (
     <div className="flex justify-center items-center mt-10">
@@ -48,6 +47,7 @@ const Categories = () => {
             <Image
               src="/Images/top_icon.png"
               alt="My Icon"
+              className=""
               width={40}
               height={40}
             />
@@ -59,5 +59,4 @@ const Categories = () => {
     </div>
   );
 };
-
 export default Categories;
