@@ -1,8 +1,9 @@
 import React from 'react'
 
+
 const success = () => {
   return (
-    <div>Phone number</div>
+    <div>"Your order has been placed successfully. Please contact seller for further details."</div>
   )
 }
 

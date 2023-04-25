@@ -64,7 +64,7 @@ export default function Submit() {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
-                  <div className="mb-1 ml-1">Email Id</div>
+                  <div className="mb-1 ml-1">Phone Number</div>
                   <input
                     type="text"
                     value={email}

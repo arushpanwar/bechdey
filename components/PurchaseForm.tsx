@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
 
 const supabaseUrl = "https://zigydihmnwehecgeokqz.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InppZ3lkaWhtbndlaGVjZ2Vva3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNTU5MzcsImV4cCI6MTk5NzgzMTkzN30.X5tDt3Pk0dk_TPHzr3us_lqHDJuRZ6YpT0zMAeIIfTE";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InppZ3lkaWhtbndlaGVjZ2Vva3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNTU5MzcsImV4cCI6MTk5NzgzMTkzN30.X5tDt3Pk0dk_TPHzr3us_lqHDJuRZ6YpT0zMAeIIfTE";
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
@@ -16,7 +15,27 @@ const PurchaseForm = (props) => {
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
-
+  const [products, setProducts] = useState<Product[]>([]);
+  const selectedProduct = products.find((product) => product.id == props.id);
+  const phoneno=selectedProduct?.email;
+  const whatsappLink=`https://wa.me/${phoneno}?text=Hi,%20I%20want%20to%20rent%20${selectedProduct?.name}%20from%20your%20website%20for%20${selectedProduct?.price}%20rupees`;
+  
+  useEffect(() => {
+    async function fetchProducts() {
+      const { data, error } = await supabase
+      .from<Product>("products")
+      .select("*");
+      
+      if (error) {
+        console.error(error);
+      } else {
+        setProducts(data);
+      }
+    }
+    
+    fetchProducts();
+  }, []);
+  
   const handleInputChange = () => {
     if (
       email !== "" &&
@@ -24,28 +43,32 @@ const PurchaseForm = (props) => {
       lastName !== "" &&
       address !== "" &&
       phone !== ""
-    ) {
-      setFormValid(true);
+      ) {
+        setFormValid(true);
     } else {
       setFormValid(false);
     }
   };
-
+  
   const deleteItem = async (id) => {
     const { data, error } = await supabase
-      .from("products")
-      .delete()
-      .match({ id: id });
-
+    .from("products")
+    .delete()
+    .match({ id: id });
+    
     if (error) {
       console.log("Error deleting item:", error.message);
     } else {
       console.log("Item deleted successfully:", data);
     }
   };
-
+  
   const router = useRouter();
-
+  
+  
+  
+  
+  
   const handleBuyNowClick = (e) => {
     e.preventDefault();
     if (email && firstName && lastName && address && phone) {
@@ -53,6 +76,7 @@ const PurchaseForm = (props) => {
       deleteItem(props.id);
       setPurchased(true);
       router.push("/success");
+      window.alert("Order Placed");
     } else {
       // show an error message or highlight the unfilled fields
       alert("Please fill in all the fields.");
@@ -174,10 +198,10 @@ const PurchaseForm = (props) => {
             <div className="grid grid-cols-6 mb-3">
               <div>
                 <button
-                  type="button"
-                  className="text-neutral-800 bg-amber-300  hover:text-neutral-800 font-semibold py-2 px-4 rounded shadow-md outline-none hover:outline-red-800 hover:bg-amber-400"
+                  type="button" 
+                  className="w-50 text-neutral-800 bg-amber-300  hover:text-neutral-800 font-semibold py-2 px-4 rounded shadow-md outline-none hover:outline-red-800 hover:bg-amber-400"
                 >
-                  return
+                  <a href={`${whatsappLink}`}>Chat with Seller</a>
                 </button>
               </div>
               <div>
@@ -186,7 +210,7 @@ const PurchaseForm = (props) => {
                   className="bg-red-800 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded shadow-md"
                   onClick={handleBuyNowClick}
                 >
-                  Buy Now
+                  Rent Now
                 </button>
               </div>
             </div>
