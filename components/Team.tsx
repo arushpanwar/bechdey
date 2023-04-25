@@ -7,6 +7,11 @@ const team = [
     role: "Full Stack Developer",
     bio: "Allrounder",
     avatarSrc: "/Images/Team/Arush.jpg",
+    socialLinks: {
+      twitter: "https://twitter.com/panwar_arush",
+      linkedin: "https://www.linkedin.com/in/arushpanwar/",
+      github: "",
+    },
   },
   {
     name: "Dhruv Rajak",

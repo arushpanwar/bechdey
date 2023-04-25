@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
-import Image from "next/image";
-import { log } from "console";
+import PurchaseForm from "@/components/PurchaseForm";
 
 const supabaseUrl = "https://zigydihmnwehecgeokqz.supabase.co";
 const supabaseKey =
@@ -12,6 +11,11 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 const Post = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [purchased, setPurchased] = useState(false);
+
+  const handleBuyNowClick = () => {
+    setPurchased(true);
+  }
 
   useEffect(() => {
     async function fetchProducts() {
@@ -38,6 +42,9 @@ const Post = () => {
 
   return (
     <>
+    {purchased ? (
+        <PurchaseForm id={id} name={selectedProduct?.name} price={selectedProduct?.price} image={selectedProduct?.image} />
+      ) : (
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
@@ -106,13 +113,14 @@ const Post = () => {
                   {selectedProduct?.description} 
                 </p>
               </div>
-              <button className="flex w-96 bg-gray-600 text-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded-lg">
+              <button onClick={handleBuyNowClick} className="flex w-96 bg-gray-600 text-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded-lg">
                 Rent Now
               </button>
             </div>
           </div>
         </div>
       </section>
+      )}
     </>
   );
 };
