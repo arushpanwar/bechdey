@@ -36,7 +36,7 @@ export default function Submit() {
   return (
     <>
       <section className="">
-        <div className="py-6 px-10 mx-auto my-6 max-w-2xl lg:py-16 bg-neutral-200 rounded-lg">
+        <div className="py-6 px-10 mx-auto my-6 max-w-2xl lg:py-16 bg-white rounded-lg">
           <h2 className="mb-4 text-2xl font-bold text-gray-900 ">
             Add a new product
           </h2>
@@ -130,7 +130,7 @@ export default function Submit() {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-950 rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-blue-800"
+              className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-red-800 hover:bg-amber-300 hover:text-neutral-800 rounded-lg focus:ring-4 focus:ring-primary-200"
             >
               Add product
             </button>

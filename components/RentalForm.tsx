@@ -65,9 +65,9 @@ function RentalForm() {
     <>
 
       <div className="flex justify-center items-center h-screen ml-6">
-        <form onSubmit={handleSubmit} className="flex flex-col bg-white rounded-lg shadow-lg p-8">
+        <form onSubmit={handleSubmit} className="flex flex-col bg-white rounded-lg shadow-lg px-8 py-8">
 
-          <div className="grid grid-cols-3 gap-4 mb-3">
+          <div className="grid grid-cols-3 gap-4 mb-3 ">
 
             <div className="flex flex-col mb-3">
               <label htmlFor="cloth_type" className="block text-neutral-800 font-bold mb-2">Cloth Type :</label>
