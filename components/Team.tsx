@@ -58,16 +58,28 @@ const Team = () => {
             the beauty of the product.
           </p>
         </div>
-        <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-          {team.map((team: Team) => (
+        <div className="flex flex-col items-center">
+          <div className="mb-12">
             <TeamCard
-              key={team.name}
-              name={team.name}
-              role={team.role}
-              bio={team.bio}
-              avatarSrc={team.avatarSrc}
+              name={"Dr. Niharika Anand"}
+              role={"Supervisor"}
+              bio={""}
+              avatarSrc={
+                "https://iiitl.ac.in/wp-content/uploads/2019/09/niharika-e1569760305721-800x800.jpeg"
+              }
             />
-          ))}
+          </div>
+          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+            {team.map((team: Team) => (
+              <TeamCard
+                key={team.name}
+                name={team.name}
+                role={team.role}
+                bio={team.bio}
+                avatarSrc={team.avatarSrc}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
