@@ -13,6 +13,7 @@ export default function Submit() {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [color, setColor] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -20,7 +21,7 @@ export default function Submit() {
     // TODO: Submit data to Supabase
     const { data, error } = await supabase
       .from("products")
-      .insert([{ name, price, image, description, color }]);
+      .insert([{ name, price, image, description, color, email }]);
 
     if (error) {
       console.error(error);
@@ -56,6 +57,22 @@ export default function Submit() {
                     id="name"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                     placeholder="Type product name"
+                    required
+                  />
+                </label>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  <div className="mb-1 ml-1">Email Id</div>
+                  <input
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    name="email"
+                    id="email"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                    // placeholder="Type Email"
                     required
                   />
                 </label>
