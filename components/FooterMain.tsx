@@ -3,13 +3,14 @@ import Link from "next/link";
 
 const FooterMain: React.FC = () => {
   return (
-    <footer className="text-black bg-neutral-100 pt-12 pb-4 flex justify-evenly">
+    <footer className="text-black bg-white pt-12 pb-8 flex justify-evenly">
       <Link legacyBehavior href={"/"}>
         <a className="flex  items-center">
-          <img src="/logo.png" className="w-12 h-12 -rotate-45" alt="logo" />
-          <span className="ml-3 font-semibold text-blue-950 text-3xl">
-            Rentway
-          </span>
+        <img
+                src="/logo2.png"
+                className="w-64"
+                alt="logo"
+              />
         </a>
       </Link>
       <div className="mb-4">

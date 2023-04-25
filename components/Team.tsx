@@ -47,7 +47,7 @@ interface TeamCardProps {
 const Team = () => {
   return (
     <section className="bg-white">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl">
+      <div className="py-20 px-4 mx-auto max-w-screen-xl">
         <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
           <h2 className="mb-4 text-5xl font-semibold text-neutral-800">
             Our Team

@@ -36,8 +36,8 @@ const ProductsList = () => {
   return (
     <div>
       <section className="text-gray-600 body-font">
-        <div className="container px-5 pt-20 pb-14 mx-auto">
-          <h1 className="flex justify-center text-5xl font-semibold mb-4 text-neutral-800">
+        <div className="container px-5 pt-16 mt-28 pb-14 mx-auto bg-white">
+          <h1 className="flex justify-center  text-5xl font-semibold mb-10 text-neutral-800">
             <Link href="/products">Top Products</Link>
           </h1>
           <div className="flex justify-center">

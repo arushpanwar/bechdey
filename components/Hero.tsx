@@ -13,13 +13,14 @@ const Hero = () => {
   }, [bannerIndex]);
 
   return (
-    <div className="relative flex justify-center">
+    // mt-24 to get top margin a bit
+    <div className="   relative flex justify-center ">
       {banners.map((banner, index) => (
         <img
           key={index}
           src={banner}
           alt={`banner${index}`}
-          className={`banner px-20 h-[500px] mb-10 ${
+          className={`banner px-20 h-[700px]  ${
             index === bannerIndex ? "" : "hidden"
           }`}
         />

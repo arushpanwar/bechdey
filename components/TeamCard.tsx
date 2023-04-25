@@ -15,7 +15,7 @@ interface TeamCardProps {
 const TeamCard = ({ name, role, bio, avatarSrc }: TeamCardProps) => {
   return (
     <>
-      <div className="items-center bg-gray-50 rounded-lg shadow sm:flex ">
+      <div className="items-center bg-amber-100 rounded-lg shadow sm:flex ">
         <img
           className="rounded-lg sm:rounded-none sm:rounded-l-lg w-52 h-52 object-cover"
           src={avatarSrc}

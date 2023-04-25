@@ -39,8 +39,8 @@ const Header = () => {
 
   return (
     <header className="text-gray-600 body-font flex flex-col justify-center">
-      <div className="bg-white flex py-4 px-8 flex-col items-center ">
-        <div className=" w-full flex justify-between items-center px-[26rem]">
+      <div className="bg-white flex pb-2 px-8 flex-col items-center ">
+        <div className=" w-full flex justify-between items-center pl-[26rem] pr-[21rem]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -57,15 +57,15 @@ const Header = () => {
           </svg>
 
           <Link legacyBehavior href={"/"}>
-            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 py-2">
+            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 py-2 ml-4">
               <img
-                src="/logo.png"
-                className="w-12 h-12 -rotate-45"
+                src="/logo2.png"
+                className="w-64"
                 alt="logo"
               />
-              <span className="ml-3 font-semibold text-blue-950 text-3xl">
+              {/* <span className="ml-3 font-semibold text-violet-950 text-3xl">
                 Rentway
-              </span>
+              </span> */}
             </a>
           </Link>
           <div className="flex flex-row">
@@ -103,29 +103,29 @@ const Header = () => {
         </div>
         <nav className="md:mx-auto flex flex-row justify-center items-center mb-2">
           <Link legacyBehavior href={"/products"}>
-            <a className="mx-5 hover:text-neutral-600 text-neutral-950 delay-75">
+            <a className="mx-5 hover:text-red-700 text-neutral-950 delay-75">
               All Products
             </a>
           </Link>
           <Link legacyBehavior href={"/submit"}>
-            <a className="mx-5 hover:text-neutral-600 text-neutral-950 delay-75">
+            <a className="mx-5 hover:text-red-700 text-neutral-950 delay-75">
               Upload
             </a>
           </Link>
           <Link legacyBehavior href={"/about"}>
-            <a className="mx-5 hover:text-neutral-600 text-neutral-950 delay-75">
+            <a className="mx-5 hover:text-red-700 text-neutral-950 delay-75">
               About us
             </a>
           </Link>
           <Link legacyBehavior href={"/predict"}>
-            <a className="mx-5 hover:text-neutral-600 text-neutral-950 delay-75">
+            <a className="mx-5 hover:text-red-700 text-neutral-950 delay-75">
               Predict
             </a>
           </Link>
           {user ? (
             <>
               <button
-                className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0"
+                className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-red-700 hover:text-white rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0"
                 onClick={signOut}
               >
                 Logout
@@ -135,7 +135,7 @@ const Header = () => {
           ) : (
             // <GoogleButton onClick={signInWithGoogle} />
             <button
-              className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0"
+              className="inline-flex items-center border-0 py-1 px-3 focus:outline-none hover:bg-red-700 hover:text-white rounded text-neutral-900 delay-75 text-base mt-4 md:mt-0"
               onClick={signInWithGoogle}
             >
               Sign In

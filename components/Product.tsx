@@ -26,17 +26,17 @@ const dummyproduct = {
 
 const Product = ({ product }:ProductProps) => {
   return (
-    <div className="bg-white">
+    <div className="bg-amber-100">
       <div className="mx-auto max-w-2xl px-4 py-10 sm:py-10 sm:px-6  lg:max-w-7xl lg:px-8">
-        <div key={product?.id} className="group relative">
-          <div className="min-h-[250px] w-[250px] aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+        <div key={product?.id} className="group relative bg-white pb-2 rounded-lg">
+          <div className="min-h-[250px] w-[250px] aspect-h-1 aspect-w-1 overflow-hidden rounded-t-lg bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
             <img
               src={product?.image || dummyproduct.imageSrc}
               alt={product?.name || dummyproduct.name}
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="mt-4 flex justify-between">
+          <div className="mt-4 flex justify-between px-3">
             <div>
               <h3 className="text-sm text-gray-700">
                 <Link legacyBehavior href={`/product/${product?.id}`}>
