@@ -84,7 +84,8 @@ export default function Submit() {
                   <input
                     type="text"
                     value={image}
-                    onChange={(e) => setImage(e.target.value)}
+                    // onChange={(e) => setImage(e.target.value)}
+                    onChange={(e) => setImage(e.target.value.includes('drive.google.com/file/d/')?`https://drive.google.com/uc?export=view&id=${e.target.value.split('/')[5]}`:e.target.value)}
                     name="name"
                     id="image"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
