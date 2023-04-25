@@ -123,7 +123,7 @@ const PurchaseForm = () => {
               type="text"
               id="cuopon"
               name="cuopon"
-              placeholder="Gift card or Cuopon code"
+              placeholder="Gift card or Coupon code"
               className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full mr-3"
             />
             <button
