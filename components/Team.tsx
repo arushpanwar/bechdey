@@ -16,7 +16,7 @@ const team = [
   },
   {
     name: "Sahil Rathi",
-    role: "Back End & ML Developer",
+    role: "Prompt Engineer",
     bio: "I fill in wherever required",
     avatarSrc: "/Images/Team/Sahil.jpeg",
   },
