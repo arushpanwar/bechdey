@@ -90,11 +90,11 @@ const Post = () => {
                 <h1 className="flex justify-center items-center">FIRST250</h1>
                 <h1 className="flex justify-center items-center p-2">OR</h1>
                 <h1 className="flex justify-center items-center p-2">
-                  Get Extra 15% Off | Use Code: SAAKI15
+                  Get Extra 15% Off | Use Code: RENTW15
                 </h1>
                 <h1 className="flex justify-center items-center p-2">OR</h1>
                 <h1 className="flex justify-center items-center pt-2">
-                  Avail POPcoins discounts along with
+                  Avail Rcoins discounts along with
                 </h1>
                 <h1 className="flex justify-center items-center">
                   existing discounts at checkout
