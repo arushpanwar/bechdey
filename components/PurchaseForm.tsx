@@ -19,7 +19,7 @@ const PurchaseForm = (props) => {
   const [products, setProducts] = useState<Product[]>([]);
   const selectedProduct = products.find((product) => product.id == props.id);
   const phoneno=selectedProduct?.email;
-  const whatsappLink=`https://wa.me/${phoneno}?text=Hi,%20I%20want%20to%20rent%20${selectedProduct?.name}%20from%20Rentway%20priced%20at%20${selectedProduct?.price}%20rupees`;
+  const whatsappLink=`https://wa.me/${phoneno}?text=Hi,%20I%20want%20to%20rent%20Your%20${selectedProduct?.name}%20I%20found%20on%20Rentway%20priced%20at%20${selectedProduct?.price}%20rupees`;
   const newLink=`https://wa.me/${phoneno}?text=Hi,%20I%20have%20rented%20${selectedProduct?.name}%20from%20Rentway%20priced%20at%20${selectedProduct?.price}%20rupees%20Please%20send%20me%20the%20courier%20details.`
   useEffect(() => {
     async function fetchProducts() {
