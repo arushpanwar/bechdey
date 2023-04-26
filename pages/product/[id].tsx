@@ -54,19 +54,19 @@ const Post = () => {
               src={selectedProduct?.image}
             />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 className="text-sm title-font text-gray-500 tracking-widest">
+              <h2 className="text-sm title-font text-gray-600 tracking-widest">
                 {selectedProduct?.color}
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium tracking-wider mb-4">
+              <h1 className="text-neutral-900 text-3xl title-font font-semibold tracking-wider mb-4">
                 {selectedProduct?.name}
               </h1>
-              <span className="text-2xl text-gray-900">
-                Rs. {selectedProduct?.price}.00
+              <span className="text-2xl text-neutral-800">
+              ₹{selectedProduct?.price}.00
               </span>
               <div className="flex items-center my-5">
-                <span className="mr-3">Size</span>
+                <span className="mr-3 text-neutral-700">Size</span>
                 <div className="relative">
-                  <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                  <select className="rounded border appearance-none border-neutral-600 py-2 focus:outline-none focus:ring-1 focus:ring-red-200 focus:border-red-500 text-base pl-3 pr-10">
                     <option>SM</option>
                     <option>M</option>
                     <option>L</option>
@@ -87,33 +87,33 @@ const Post = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center border-green-950 border rounded-lg w-96 pt-4 pb-6">
-                <h1 className="flex justify-center items-center p-2 text-xl font-semibold">
+              <div className="flex flex-col items-center justify-center border-red-800 border rounded-lg w-96 pt-4 pb-6">
+                <h1 className="flex justify-center items-center p-2 text-xl text-neutral-800 font-bold">
                   STUNNING DEALS
                 </h1>
-                <h1 className="flex justify-center items-center pt-2">
+                <h1 className="flex justify-center items-center pt-2 font-semibold text-neutral-800">
                   Get Rs. 250 off on First Purchase | Use Code:
                 </h1>
-                <h1 className="flex justify-center items-center">FIRST250</h1>
-                <h1 className="flex justify-center items-center p-2">OR</h1>
-                <h1 className="flex justify-center items-center p-2">
-                  Get Extra 15% Off | Use Code: RENTW15
+                <h1 className="flex justify-center items-center font-semibold text-red-800">FIRST250</h1>
+                <h1 className="flex justify-center items-center font-semibold text-neutral-800 p-2">OR</h1>
+                <h1 className="flex justify-center text-neutral-800 font-semibold items-center p-2">
+                  Get Extra 15% Off | Use Code: <span className="text-red-800">&nbsp; RENTW15</span> 
                 </h1>
-                <h1 className="flex justify-center items-center p-2">OR</h1>
-                <h1 className="flex justify-center items-center pt-2">
+                <h1 className="flex justify-center font-semibold text-neutral-800 items-center p-2">OR</h1>
+                <h1 className="flex justify-center font-semibold text-neutral-800 items-center pt-2">
                   Avail Rcoins discounts along with
                 </h1>
-                <h1 className="flex justify-center items-center">
+                <h1 className="flex justify-center font-semibold text-neutral-800 items-center">
                   existing discounts at checkout
                 </h1>
               </div>
               <div className="py-10">
-                <p className="text-lg font-semibold">Product Description:</p>
-                <p className="leading-relaxed">
+                <p className="text-lg text-neutral-800 font-semibold">Description:</p>
+                <p className="leading-relaxed text-neutral-800">
                   {selectedProduct?.description} 
                 </p>
               </div>
-              <button onClick={handleBuyNowClick} className="flex w-96 bg-gray-600 text-white border-0 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded-lg">
+              <button onClick={handleBuyNowClick} className="flex w-96 bg-red-600 text-white border-0 py-2 px-6 focus:outline-none hover:bg-red-400 rounded-lg">
                 Rent Now
               </button>
             </div>
