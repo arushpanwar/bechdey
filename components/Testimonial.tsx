@@ -18,7 +18,7 @@ const Testimonial = () => {
           </svg>
           <blockquote>
             <p className="text-2xl font-medium text-gray-900">
-            &quot;Brilliant app, I love it.&quot;
+            &quot;Interesting Idea. Would like to see it progress&quot;
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center mt-6 space-x-3">
