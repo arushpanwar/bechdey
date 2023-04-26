@@ -58,9 +58,9 @@ const Team = () => {
             Our Team
           </h2>
           <p className="font-light text-gray-700 lg:mb-16 sm:text-xl ">
-            A Team of Four with bespoke expertise in their following fields.{" "}
-            <br /> We focus on adding new functionalities along with maintaining
-            the beauty of the product.
+          A Team of Four, led by a supervisor, with bespoke expertise in their respective fields.
+          We are dedicated to enhancing the functionality of our product while ensuring its aesthetic appeal remains intact.
+            
           </p>
         </div>
         <div className="flex flex-col items-center">

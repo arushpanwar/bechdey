@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const banners = ["/banner1.png", "/banner2.png", "/banner3.png", "/banner4.png", "/banner5.png"];
+const banners = ["/banner1.webp", "/banner2.webp", "/banner3.webp", "/banner4.webp", "/banner5.webp"];
 
 const Hero = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
