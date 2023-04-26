@@ -202,7 +202,7 @@ const PurchaseForm = (props) => {
                   type="button" 
                   className="text-l bg-red-800 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded shadow-md"
                 >
-                  <a href={`${whatsappLink}`}>Chat with Seller</a>
+                  <a href={`${whatsappLink}`} target="_blank">Chat with Seller</a>
                 </button>
               </div>
               <div className="p-2">
