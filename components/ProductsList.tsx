@@ -32,6 +32,7 @@ const ProductsList = () => {
   }, []);
 
   const lastFourProducts = products.slice(-4);
+  const nextFourProducts = products.slice(-8,-4);
 
   return (
     <div>
@@ -42,6 +43,13 @@ const ProductsList = () => {
           </h1>
           <div className="flex justify-center">
             {lastFourProducts.map((product) => (
+              <>
+              <Product key={product.id} product={product} />
+            </>
+          ))}
+          </div>
+          <div className="flex justify-center">
+            {nextFourProducts.map((product) => (
               <>
               <Product key={product.id} product={product} />
             </>
