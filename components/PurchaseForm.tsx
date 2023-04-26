@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
+import Success from "./Success";
 
 const supabaseUrl = "https://zigydihmnwehecgeokqz.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InppZ3lkaWhtbndlaGVjZ2Vva3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNTU5MzcsImV4cCI6MTk5NzgzMTkzN30.X5tDt3Pk0dk_TPHzr3us_lqHDJuRZ6YpT0zMAeIIfTE";
@@ -18,8 +19,8 @@ const PurchaseForm = (props) => {
   const [products, setProducts] = useState<Product[]>([]);
   const selectedProduct = products.find((product) => product.id == props.id);
   const phoneno=selectedProduct?.email;
-  const whatsappLink=`https://wa.me/${phoneno}?text=Hi,%20I%20want%20to%20rent%20${selectedProduct?.name}%20from%20your%20website%20for%20${selectedProduct?.price}%20rupees`;
-  
+  const whatsappLink=`https://wa.me/${phoneno}?text=Hi,%20I%20want%20to%20rent%20${selectedProduct?.name}%20from%20Rentway%20priced%20at%20${selectedProduct?.price}%20rupees`;
+  const newLink=`https://wa.me/${phoneno}?text=Hi,%20I%20have%20rented%20${selectedProduct?.name}%20from%20Rentway%20priced%20at%20${selectedProduct?.price}%20rupees%20Please%20send%20me%20the%20courier%20details.`
   useEffect(() => {
     async function fetchProducts() {
       const { data, error } = await supabase
@@ -75,7 +76,7 @@ const PurchaseForm = (props) => {
       // execute the deleteItem and router.reload() functions
       deleteItem(props.id);
       setPurchased(true);
-      router.push("/success");
+      // router.push("/success");
       window.alert("Order Placed");
     } else {
       // show an error message or highlight the unfilled fields
@@ -87,7 +88,7 @@ const PurchaseForm = (props) => {
   return (
     <>
       {purchased ? (
-        <h1>Success</h1>
+        <Success id={props.id} newLink={newLink} />
       ) : (
         <div className="grid grid-cols-2 ">
           <form className="flex flex-col bg-white p-8 ">
@@ -195,19 +196,19 @@ const PurchaseForm = (props) => {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-6 mb-3">
-              <div>
+            <div className="flex p-2">
+              <div className="p-2">
                 <button
                   type="button" 
-                  className="w-50 text-neutral-800 bg-amber-300  hover:text-neutral-800 font-semibold py-2 px-4 rounded shadow-md outline-none hover:outline-red-800 hover:bg-amber-400"
+                  className="text-l bg-red-800 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded shadow-md"
                 >
                   <a href={`${whatsappLink}`}>Chat with Seller</a>
                 </button>
               </div>
-              <div>
+              <div className="p-2">
                 <button
                   type="submit"
-                  className="bg-red-800 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded shadow-md"
+                  className="bg-red-800 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded shadow-md p-4"
                   onClick={handleBuyNowClick}
                 >
                   Rent Now
@@ -229,7 +230,7 @@ const PurchaseForm = (props) => {
                   type="text"
                   id="cuopon"
                   name="cuopon"
-                  placeholder="Gift card or Cuopon code"
+                  placeholder="Gift card or Coupon code"
                   className="border rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline w-full mr-3"
                 />
                 <button
