@@ -8,6 +8,8 @@ Built by :
 3. Arush Panwar - LCS2020032
 4. Sahil Rathi - LCS2020018
 
+[Project Report](https://drive.google.com/file/d/1YtabX-jz9SPb_icv8f16uKBkLmBIOfhz/view?usp=drive_link)
+
 ## Features
 1. *Front-end*: Used Tailwind CSS to improve usability and for a better design
 2. *Back-end*: Developed a robust and scalable eCommerce website from scratch using Next.js, and TypeScript, enabling users to rent and buy items at competitive prices. Utilized Supabase for seamless CRUD operations and authentication, ensuring data security, reliability, and accessibility for both sellers and buyers.
