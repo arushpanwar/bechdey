@@ -1,38 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rentway 
 
-## Getting Started
+A web ecommerce app to rent old items and predict their prices using the [Decision Tree Model](https://github.com/Chinmay-Dorge/rentway-ml)
 
-First, run the development server:
+Built by :
+1. Chinmay Dorge - LCS2020022
+2. Dhruv Rajak - LCS2020062
+3. Arush Panwar - LCS2020032
+4. Sahil Rathi - LCS2020018
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
+1. *Front-end*: Used Tailwind CSS to improve usability and for a better design
+2. *Back-end*: Developed a robust and scalable eCommerce website from scratch using Next.js, and TypeScript, enabling users to rent and buy items at competitive prices. Utilized Supabase for seamless CRUD operations and authentication, ensuring data security, reliability, and accessibility for both sellers and buyers.
+3. *Model used*: Leveraged machine learning model based on the decision tree algorithm to predict the price of any item, enhancing the accuracy and efficiency of the platform.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Home Page](https://github.com/Chinmay-Dorge/bechdey/assets/76404505/c197ca69-2628-4c5f-bafb-85936167f980)
+![Features](https://github.com/Chinmay-Dorge/bechdey/assets/76404505/b5231af7-0c34-4e2b-aa8e-c4314b26920d)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Upload new Item
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Supabase was used to develop a robust and secure database that could store user data and transaction information securely.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![Upload New Item](https://github.com/Chinmay-Dorge/bechdey/assets/76404505/0789373b-5fbf-48e6-be91-f94cbb716455)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Predict the Price to rent for an item
 
-## Learn More
+The [Decision Tree Model](https://github.com/Chinmay-Dorge/rentway-ml) is being used in RentWay to determine the appropriate rental price for a given clothing item. The model takes into account several factors, such as the brand, type of clothing and other factors to give a prediction of the rental price of the item. The model takes 12 input parameters and has made a decision tree using the same
 
-To learn more about Next.js, take a look at the following resources:
+1. Example - 1
+![Price Predict - 1](https://github.com/Chinmay-Dorge/bechdey/assets/76404505/75535c36-6bc7-400c-a4c8-60682bce4200)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Example - 2
+![Price Predict - 2](https://github.com/Chinmay-Dorge/bechdey/assets/76404505/d681daec-8956-4438-8cfb-3482b81e000f)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
