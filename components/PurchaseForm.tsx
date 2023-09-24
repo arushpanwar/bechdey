@@ -2,11 +2,7 @@ import React, { useState,useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
 import Success from "./Success";
-
-const supabaseUrl = "https://zigydihmnwehecgeokqz.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InppZ3lkaWhtbndlaGVjZ2Vva3F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIyNTU5MzcsImV4cCI6MTk5NzgzMTkzN30.X5tDt3Pk0dk_TPHzr3us_lqHDJuRZ6YpT0zMAeIIfTE";
-
-const supabase = createClient(supabaseUrl, supabaseKey);
+import { supabase } from "@/lib/supabase";
 
 const PurchaseForm = (props) => {
   const [purchased, setPurchased] = useState(false);
