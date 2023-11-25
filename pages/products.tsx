@@ -17,9 +17,7 @@ const Products = () => {
 
   useEffect(() => {
     async function fetchProducts() {
-      const { data, error } = await supabase
-        .from<Product>("products")
-        .select("*");
+      const { data, error }: any = await supabase.from("products").select("*");
 
       if (error) {
         console.error(error);
@@ -34,28 +32,22 @@ const Products = () => {
   return (
     <>
       <div className="flex flex-col justify-center">
-  {products.reduce((rows, product, index) => {
-    if (index % 4 === 0) rows.push([]);
-    rows[rows.length - 1].push(product);
-    return rows;
-  }, []).map((row, index) => (
-    <div key={index} className="flex justify-center">
-      {row.map((product) => (
-        <div key={product.id} className="px-4">
-          <Product product={product} />
-        </div>
-      ))}
-    </div>
-  ))}
-</div>
-
-      {/* <div className="flex justify-center">
-      {products.map((product) => (
-        <>
-          <Product key={product.id} product={product} />
-        </>
-      ))}
-    </div> */}
+        {products
+          .reduce((rows: any, product: any, index: any) => {
+            if (index % 4 === 0) rows.push([]);
+            rows[rows.length - 1].push(product);
+            return rows;
+          }, [])
+          .map((row: any, index: number) => (
+            <div key={index} className="flex justify-center">
+              {row.map((product: any) => (
+                <div key={product.id} className="px-4">
+                  <Product product={product} />
+                </div>
+              ))}
+            </div>
+          ))}
+      </div>
     </>
   );
 };

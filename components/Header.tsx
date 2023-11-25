@@ -117,11 +117,11 @@ const Header = () => {
               About us
             </a>
           </Link>
-          <Link legacyBehavior href={"/predict"}>
+          {/* <Link legacyBehavior href={"/predict"}>
             <a className="mx-5 hover:text-red-700 text-neutral-950 delay-75">
               Predict
             </a>
-          </Link>
+          </Link> */}
           {user ? (
             <>
               <button
